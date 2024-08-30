@@ -185,7 +185,7 @@ function CreateBlog() {
 
                 {/* Four Editor  */}
                 <Editor
-                    apiKey='qcc8ci05au5gg3g03ho17f33amaryy32fpksv8t0in1q4q1y'
+                    apiKey={import.meta.env.TINYMCE}
                     onEditorChange={(newValue, editor) => {
                         setBlogs({ ...blogs, content: newValue });
                         settext(editor.getContent({ format: 'text' }));

@@ -47,7 +47,7 @@ export default App
 
 export const ProtectedRouteForAdmin = ({ children }) => {
   const admin = JSON.parse(localStorage.getItem('admin'))
-  if (admin?.user?.email === "kd@ng.com") {
+  if (admin?.user?.email === import.meta.env.ADMIN_EMAIL) {
     return children
   }
   else {
